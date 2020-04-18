@@ -43,7 +43,7 @@ class Library:
 if __name__ == '__main__':
     list_of_books = ["The Merchant of Venice", "Rich Dad Poor Dad", "The Alchemist", "War and Peace", "Lolita"]
     unique_ID = 1999
-    People = Library(list_of_books, "People")
+    Peoples = Library(list_of_books, "Peoples")
     # print(f"Welcome to {self.library_name} Library \n press 'E' to Exit")
     print(
         "1. press 'D' to display all the books in the libaray \n 2. press 'L' to lend books from library \n 3. press 'R' to return books to the librar \n 4. press 'A' to add books to the library \n 5. press 'De' to delete books from the Library")
@@ -55,23 +55,23 @@ if __name__ == '__main__':
         if (_input == 'E'):
             Exit = True
         elif (_input == 'D'):
-            People.display_books()
+            Peoples.display_books()
         elif (_input == 'L'):
             _input1 = input("Name of the book: ")
             _input2 = input("Author of the book: ")
             print("Book Lend")
-            People.lend_books(_input1, _input2)
+            Peoples.lend_books(_input1, _input2)
         elif (_input == 'A'):
             _input1 = input("Name of the Book: ")
-            People.add_books(_input1)
+            Peoples.add_books(_input1)
         elif (_input == 'De'):
             unique_input = int(input("enter the Unique ID to delete the book"))
             if (unique_input == unique_ID):
                 _input2 = input("Enter the book you want to delete")
-                People.delete_books(_input2)
+                Peoples.delete_books(_input2)
             else:
                 print("Sorry!!! we can't delete the book")
         elif (_input == 'R'):
             _input3 = input("Name of the book: ")
             _input4 = input("Your name: ")
-            People.return_book(_input3, _input4)
+            Peoples.return_book(_input3, _input4)
